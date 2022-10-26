@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jobportal
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: jobportal
+  template:
+    metadata:
+      labels:
+        app: jobportal
+
+    spec:
+      containers:
+        - name: jobportal
+          image: au.icr.io/testspace1/jobportal
+          imagePullPolicy: Always
