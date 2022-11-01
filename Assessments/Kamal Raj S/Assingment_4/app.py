@@ -6,14 +6,14 @@ app = Flask(__name__)
 
 app.secret_key = 'a'
 
-hostname = "1bbf73c5-d84a-4bb0-85b9-ab1a4348f4a4.c3n41cmd0nqnrk39u98g.databases.appdomain.cloud"
-uid = "rrx76661"
-pwd = "56MeoVh9pHyZYDZA"
-driver = "{IBM DB2 ODBC DRIVER}"
-db = "bludb"
-port = "32286"
-protocol = "TCPIP"
-cert = "Certificate.crt"
+hostname = ""
+uid = ""
+pwd = ""
+driver = ""
+db = ""
+port = ""
+protocol = ""
+cert = ""
 
 dsn = (
     "DATABASE={0};"
