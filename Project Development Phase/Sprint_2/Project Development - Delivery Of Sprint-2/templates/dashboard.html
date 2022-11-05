@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet"  href="{{url_for('static', filename = 'css/dash_style.css')}}" />
+</head>
+
+<body>
+    <h2>Expense Tracker</h2>
+    <div class="container">
+        <h4>Your Balance</h4>
+        <h1 id="balance">{{balance}}</h1>
+        <div class="inc-exp-container">
+            <div>
+                <h4>Income</h4>
+                <p id="money-plus" class="money-plus">{{income}}</p>
+            </div>
+            <div>
+                <h4>Expense</h4>
+                <p id="money-minus" class="money-minus">{{expense}}</p>
+            </div>
+        </div>
+
+        <h3><a href="#" style="text-decoration: None ;  color: #9c88ff;">Click here</a> to see Transaction History</h3>
+
+        <h3>Add New Transaction</h3>
+        <form id="form" name="cash" method="post">
+            <div class="form-control">
+                <label for="text">Text</label>
+                <input type="text" id="text" name="transaction_for" placeholder="Enter Text...." >
+            </div>
+            <div class="form-control">
+                <label for="amount">Amount <br> (negative - expense ,positive - income )</label>
+                <input type="number" id="amount" name="rupee" placeholder="Enter amount..." required>
+            </div>
+            <button class="btn" name="submit">Submit</button>
+            <div class="form-control">
+                <label for="text">Set/Change Expense limit</label>
+                <input type="number" id="text" name="bal_limit" placeholder="Enter Limit...." />
+                <p>When limit is set you will be notified when Expenses are made beyond the limit.</p>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
