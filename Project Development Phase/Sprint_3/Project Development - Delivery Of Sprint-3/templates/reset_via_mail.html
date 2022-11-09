@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'css/style.css')}}">
+  </head>
+    <body>
+      <div class="login-wrapper">
+        <form action="/password-mail" class="form" method="post">
+          <div class="mess">
+            {{msg}}
+          </div>
+          <h2>Provide mail id to reset password</h2>
+          <div class="input-group">
+            <input type="email" name="email" id="loginUser" required>
+            <label for="loginUser">Email</label>
+          </div>
+          <input type="submit" value="submit" class="submit-btn"><br>
+          <a class="clr-btn" href="/">Cancel</a>
+        </form>
+      </div> 
+    </body>
+</html>
