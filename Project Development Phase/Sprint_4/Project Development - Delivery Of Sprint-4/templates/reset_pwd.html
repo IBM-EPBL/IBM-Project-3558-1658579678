@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'css/style.css')}}">
+  </head>
+    <body>
+      <div class="login-wrapper">
+        <form action="/password-reset" class="form" method="post">
+          <div class="mess">
+            {{msg}}
+          </div>
+          <h2>Reset Password</h2>
+          <div class="input-group">
+            <input type="password" name="res_pswd" id="loginUser" required>
+            <label for="loginUser">Password</label>
+          </div>
+          <input type="submit" value="submit" class="submit-btn"><br>
+          <a class="clr-btn" href="/">Cancel</a>
+        </form>
+      </div> 
+    </body>
+</html>

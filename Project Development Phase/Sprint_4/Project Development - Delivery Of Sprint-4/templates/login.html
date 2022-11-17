@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  <title>Personal Expense Tracker Login</title>
+</head>
+<body>
+  <div class="login-wrapper">
+    <form action="/login" class="form" method="post">
+      <div class="mess">
+        {{msg}}
+      </div>
+      <h2>Login</h2>
+      <div class="input-group">
+        <input type="text" name="username" id="loginUser" required>
+        <label for="loginUser">User Name</label>
+      </div>
+      <div class="input-group">
+        <input type="password" name="password" id="loginPassword" required>
+        <label for="loginPassword">Password</label>
+      </div>
+      <input type="submit" value="Login" class="submit-btn">
+      <a href="/password-mail" class="forgot-pw">Forgot Password?</a><br><br><br>
+      <div class="reg">
+        <p>Don't have an account yet? Click here to <a class="reg-log-link" href="register">register! </a> </p>
+      </div><br>
+      <a class="clr-btn" href="/">Go Home</a>
+    </form>
+  </div>
+
+  
+</body>
+</html>
