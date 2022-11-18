@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: expensetracker
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: expensetracker
+  template:
+    metadata:
+      labels:
+        app: expensetracker
+
+    spec:
+      containers:
+        - name: expensetracker
+          image: au.icr.io/testspace1/expensetrackerapp
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 5000

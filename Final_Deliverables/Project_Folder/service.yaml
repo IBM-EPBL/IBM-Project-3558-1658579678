@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: expensetracker-service
+spec:
+  selector:
+    app: expensetracker
+  ports:
+  - name: expensetracker
+    port: 5000
+    targetPort: 5000
+  type: NodePort

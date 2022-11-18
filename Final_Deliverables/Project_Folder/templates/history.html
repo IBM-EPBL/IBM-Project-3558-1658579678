@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/history.css')}}">
+    <title>Transaction History</title>
+</head>
+<body>
+    <table class="table">
+        <thead class="table_header">
+            <th class="table_cell">User</th>
+            <th class="table_cell">Transaction</th>
+            <th class="table_cell">Income</th>
+            <th class="table_cell">Expense</th>
+        </thead>
+        {% for row in data %}
+        <tr class="table_row">
+            {% for cell in row %}
+            <td class="table_cell">{{cell}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+
+    <button class="dash_btn"><a href="/dashboard">Go Back To Dashboard</a></button>
+</body>
+</html>
