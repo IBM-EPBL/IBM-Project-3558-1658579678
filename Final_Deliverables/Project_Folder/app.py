@@ -126,7 +126,7 @@ def internal_error(error):
 
 @app.route('/dashboard', methods = ['POST', 'GET'])
 def Dashboard():
-    global bal , Inc , exp , exp_limit , expint
+    global bal , Inc , exp
 
     if session['loggedin'] == True:
 
@@ -195,8 +195,9 @@ def Dashboard():
             ibm_db.execute(up_stmt)
             limit_info = ibm_db.fetch_assoc(up_stmt)
 
-            bal_limit = limit_info['BALANCE']
-
+            bal_limit = limit_info['BALANCE'] #balance
+            update_exp_limit = limit_info['BAL_LIMIT'] #expense limit
+            update_exp = limit_info['EXPENSE']  #total expense
             
             if amount < 0:
                 if record['EXPENSE'] >= record['BAL_LIMIT']:
